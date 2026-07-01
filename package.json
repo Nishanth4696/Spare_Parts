@@ -1,0 +1,41 @@
+{
+  "name": "spare-parts-pos",
+  "version": "1.0.0",
+  "description": "Offline two-wheeler spare parts POS + inventory",
+  "main": "electron/main.js",
+  "private": true,
+  "scripts": {
+    "dev:vite": "vite",
+    "dev:electron": "wait-on tcp:5173 && cross-env NODE_ENV=development electron .",
+    "dev": "concurrently -k \"npm:dev:vite\" \"npm:dev:electron\"",
+    "build": "vite build",
+    "start": "cross-env NODE_ENV=production electron .",
+    "seed": "electron electron/seed-runner.js --no-sandbox --disable-gpu",
+    "postinstall": "electron-rebuild -f -w better-sqlite3"
+  },
+  "dependencies": {
+    "@reduxjs/toolkit": "^2.12.0",
+    "better-sqlite3": "^11.3.0",
+    "cors": "^2.8.5",
+    "express": "^4.21.0",
+    "lucide-react": "^1.22.0",
+    "multer": "^2.2.0",
+    "react-redux": "^9.3.0",
+    "recharts": "^3.9.1"
+  },
+  "devDependencies": {
+    "@electron/rebuild": "^4.1.0",
+    "@vitejs/plugin-react": "^4.3.1",
+    "autoprefixer": "^10.4.20",
+    "concurrently": "^9.0.1",
+    "cross-env": "^7.0.3",
+    "electron": "^32.1.2",
+    "postcss": "^8.4.47",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.26.2",
+    "tailwindcss": "^3.4.13",
+    "vite": "^5.4.8",
+    "wait-on": "^8.0.0"
+  }
+}

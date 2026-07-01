@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .input {
+    @apply w-full border-2 border-slate-300 rounded px-3 py-2 text-base focus:border-blue-600 focus:outline-none;
+  }
+}
+
+html, body {
+  font-size: 16px;
+}
+
+@media print {
+  .no-print {
+    display: none !important;
+  }
+}

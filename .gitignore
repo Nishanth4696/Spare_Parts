@@ -1,0 +1,10 @@
+node_modules/
+dist/
+dist-electron/
+data/*.sqlite
+data/*.sqlite-journal
+data/*.sqlite-wal
+data/*.sqlite-shm
+data/backups/
+*.log
+.DS_Store
